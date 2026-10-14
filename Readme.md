@@ -1,8 +1,14 @@
 # ShakespeareGPT
 
-### Generate Shakespeare-inspired text with a Transformer language model
+### Shakespeare-Inspired Text Generation with PyTorch
 
-A Python and Streamlit application that generates Shakespeare-inspired text using a PyTorch Transformer language model.
+**Developed and maintained by Akhand Pratap**
+
+ShakespeareGPT is a Python-based text-generation application that uses a Transformer language model and Streamlit to generate Shakespeare-inspired text from user-provided prompts.
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-blue)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-Deep%20Learning-ee4c2c)](https://pytorch.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Web%20App-ff4b4b)](https://streamlit.io/)
 
 [GitHub Repository](https://github.com/Akhandp10/ShakespeareGPT) · [Report an Issue](https://github.com/Akhandp10/ShakespeareGPT/issues)
 
@@ -10,26 +16,26 @@ A Python and Streamlit application that generates Shakespeare-inspired text usin
 
 ## Overview
 
-**ShakespeareGPT** is a text-generation project that uses a Transformer-based language model implemented with PyTorch to produce text inspired by William Shakespeare's writing style. Enter a starting phrase and let the model generate a continuation.
+ShakespeareGPT is a text-generation application designed to produce text inspired by William Shakespeare's writing style. It uses a Transformer-based language model implemented with PyTorch and provides an interactive interface through Streamlit.
 
-This repository is a customized version of the original [Axios-2.0 project](https://github.com/NeonKazuha/Axios-2.0). The original code and contributions remain subject to their applicable licenses and attribution requirements.
+Users can provide an initial phrase and generate a continuation using the trained model.
 
 ## Features
 
-- **Prompt-based generation:** Start with your own text.
-- **Transformer model:** Uses PyTorch for neural text generation.
-- **Interactive interface:** Run the application through Streamlit.
-- **Saved model weights:** Uses `Shakespeare_model.pth` when available and compatible.
-- **Notebook:** Includes a Jupyter notebook for model exploration.
+- **Prompt-Based Generation:** Generate text from a user-provided starting phrase.
+- **Transformer Architecture:** Use a neural language model built with PyTorch.
+- **Interactive Web Interface:** Access text generation through Streamlit.
+- **Model Checkpoint Support:** Load saved model parameters from `Shakespeare_model.pth`.
+- **Python-Based Workflow:** Explore model implementation and experimentation using Python and Jupyter Notebook.
 
 ## Technology Stack
 
 | Technology | Purpose |
 |---|---|
-| Python | Application and model code |
-| PyTorch | Neural network and inference |
+| Python | Application and model implementation |
+| PyTorch | Neural network and text generation |
 | Streamlit | Interactive web interface |
-| Jupyter Notebook | Model experimentation |
+| Jupyter Notebook | Model exploration and experimentation |
 
 ## Project Structure
 
@@ -37,6 +43,7 @@ This repository is a customized version of the original [Axios-2.0 project](http
 ShakespeareGPT/
 ├── app.py
 ├── axiosthingy.py
+├── .gitignore
 ├── LICENSE
 ├── NOTICE.md
 ├── Readme.md
@@ -49,18 +56,20 @@ ShakespeareGPT/
 
 ### Prerequisites
 
+Install the following before running the project:
+
 - Python 3.10 or a compatible version supported by the dependencies
 - Git
 - pip
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Akhandp10/ShakespeareGPT.git
 cd ShakespeareGPT
 ```
 
-### 2. Create a virtual environment
+### 2. Create a Virtual Environment
 
 **macOS / Linux**
 
@@ -76,62 +85,74 @@ python -m venv .venv
 .venv\Scripts\Activate.ps1
 ```
 
-### 3. Install dependencies
+### 3. Install Dependencies
 
 ```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-### 4. Run the application
+### 4. Launch the Application
 
 ```bash
 streamlit run app.py
 ```
 
-Open the local URL printed by Streamlit in your browser.
-
-If the application reports a missing dependency or model checkpoint, verify that the required files are present and that your installed packages match `requirements.txt`.
+Once the application starts, open the local URL displayed in the terminal.
 
 ## How to Use
 
-1. Start the Streamlit application.
-2. Enter a starting phrase.
-3. Adjust the generation options available in the interface.
+1. Launch the Streamlit application.
+2. Enter a starting phrase in the interface.
+3. Adjust any generation settings available in the application.
 4. Generate and read the resulting text.
 
 The available controls depend on the current implementation of `app.py`.
 
 ## Model Information
 
-The project uses a Transformer-based language model implemented with PyTorch. The checkpoint `Shakespeare_model.pth` stores model parameters used for generation when configured in the application.
+ShakespeareGPT uses a Transformer-based language model implemented with PyTorch.
 
-Refer to the model implementation and notebook for the exact architecture, training process, and generation settings.
+The file `Shakespeare_model.pth` contains saved model parameters used by the application when loaded by the model code.
 
-Generated text may be repetitive, inconsistent, or unlike Shakespeare's original writing.
+For the exact architecture, training procedure, and generation configuration, refer to `axiosthingy.py` and `shakespearemodel.ipynb`.
+
+Generated text is produced by a language model and may contain repetition, inconsistencies, or language that differs from Shakespeare's original writing.
 
 ## Troubleshooting
 
-- **`streamlit: command not found`:** Activate your virtual environment and install the dependencies.
-- **Missing Python module:** Verify that the dependencies are installed in the same environment used to run the application.
-- **Checkpoint not found:** Confirm that `Shakespeare_model.pth` exists at the path expected by the code.
-- **Model loading error:** Check that the checkpoint matches the architecture defined in the source code.
+**Streamlit command not found**
 
-## License and Attribution
+Activate your virtual environment and install the dependencies from `requirements.txt`.
 
-This project is derived from [Axios-2.0](https://github.com/NeonKazuha/Axios-2.0).
+**Missing Python module**
 
-The original MIT license and applicable copyright notices must be retained for the material covered by that license. See [LICENSE](LICENSE) and [NOTICE.md](NOTICE.md) for licensing and attribution information.
+Ensure the dependencies are installed in the same Python environment used to launch Streamlit.
 
-Third-party assets, including model weights and datasets, may be subject to separate licensing terms.
+**Model checkpoint not found**
+
+Verify that `Shakespeare_model.pth` exists at the path expected by the application.
+
+**Model loading error**
+
+Confirm that the saved checkpoint is compatible with the model architecture defined in the source code.
+
+## License
+
+See [LICENSE](LICENSE) for the applicable license terms and [NOTICE.md](NOTICE.md) for project attribution and contribution information.
 
 ## Maintainer
 
 **Akhand Pratap**
 
+<<<<<<< HEAD
 - GitHub: [@Akhandp10](https://github.com/Akhandp10)
 - Project: [ShakespeareGPT](https://github.com/Akhandp10/ShakespeareGPT)
 
 ## Acknowledgments
 
 - The Python, PyTorch, and Streamlit communities.
+=======
+- **GitHub:** [@Akhandp10](https://github.com/Akhandp10)
+- **Project:** [ShakespeareGPT](https://github.com/Akhandp10/ShakespeareGPT)
+>>>>>>> ef86b3c (Update ShakespeareGPT README)
