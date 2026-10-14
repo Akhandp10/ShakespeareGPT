@@ -134,5 +134,4 @@ Third-party assets, including model weights and datasets, may be subject to sepa
 
 ## Acknowledgments
 
-- The original [Axios-2.0 repository](https://github.com/NeonKazuha/Axios-2.0) and its contributors.
 - The Python, PyTorch, and Streamlit communities.
